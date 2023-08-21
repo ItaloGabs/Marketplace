@@ -13,28 +13,19 @@
     </div> 
  </section>
 <main class="conteudo">
-    <div class="box-search-shop">
-        <input class="search-shop" id="filtro" placeholder="Pesquisar...." type="text">
+    <div class="box-iframe">
+      <div class="box-marketplace">
+        <h1 style="margin-right: 10px;">LOGO</h1>
+        <a href="#" target="_blank" rel="noopener noreferrer" >Marketplace</a>
+      </div>
+        <select name="filter-iframe" id="filter-iframe">
+            <option value="popular">Popular</option>
+            <option value="lasted">Novos</option>
+        </select>
     </div>
     
 <section class="main-shop">
-    <div class="filter-item-shop">
-        <p>Filtro
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M5 3H19L8.81562 13.1844C8.65593 12.7689 8.39992 12.4122 8.03751 12.0976C7.80967 11.8998 7.49146 11.7206 6.85504 11.3624L3.94202 9.72255C2.99347 9.18858 2.5192 8.9216 2.2596 8.49142C2 8.06124 2 7.54232 2 6.50448V5.81466C2 4.48782 2 3.8244 2.43934 3.4122C2.87868 3 3.58579 3 5 3Z" fill="#1C274C"/>
-                <path opacity="0.5" d="M21.9998 6.50448V5.81466C21.9998 4.48782 21.9998 3.8244 21.5605 3.4122C21.1211 3 20.414 3 18.9998 3L8.81543 13.1844C8.86481 13.3129 8.90498 13.447 8.93625 13.5872C8.99981 13.8722 8.99981 14.2058 8.99981 14.8729V17.5424C8.99981 18.452 8.99981 18.9067 9.25173 19.2613C9.50366 19.6158 9.95109 19.7907 10.846 20.1406C12.7246 20.875 13.6639 21.2422 14.3319 20.8244C14.9998 20.4066 14.9998 19.4519 14.9998 17.5424V14.8729C14.9998 14.2058 14.9998 13.8722 15.0634 13.5872C15.1957 12.9935 15.4878 12.5095 15.9623 12.0976C16.1901 11.8998 16.5083 11.7206 17.1448 11.3624L20.0578 9.72255C21.0063 9.18858 21.4806 8.9216 21.7402 8.49142C21.9998 8.06124 21.9998 7.54232 21.9998 6.50448Z" fill="#1C274C"/>
-            </svg>
-        </p>
-        <div>
-            <p>Categoria</p>
-            <label for=""><input type="checkbox" name="teste" id="">Tecnologia</label>
-            <label for=""><input type="checkbox" name="teste" id="">Viagem</label>
-            <label for=""><input type="checkbox" name="teste" id="">Roupa</label>
-            <p>Preço</p>
-            <input type="checkbox" name="teste" id="">
-        </div>
-    </div>
-    <!-- Toutes les cartes -->
+    <!-- Start Cards -->
     
     <div class="cards-shop">
       
@@ -61,6 +52,7 @@
           <p>199$<p>
         </div>
       </div>
+      <!-- End Cards -->
 
       <div class="card-shop">
         <div class="img-main">
@@ -184,9 +176,22 @@
       
      </div>
   </section>
+  <div class="pagination">
+        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.83325 17C2.83325 10.3217 2.83325 6.98263 4.90792 4.90798C6.98257 2.83331 10.3217 2.83331 16.9999 2.83331C23.6781 2.83331 27.0173 2.83331 29.0919 4.90798C31.1666 6.98263 31.1666 10.3217 31.1666 17C31.1666 23.6781 31.1666 27.0174 29.0919 29.0919C27.0173 31.1666 23.6781 31.1666 16.9999 31.1666C10.3217 31.1666 6.98257 31.1666 4.90792 29.0919C2.83325 27.0174 2.83325 23.6781 2.83325 17ZM22.7095 13.5013C23.1245 13.0864 23.1245 12.4136 22.7095 11.9987C22.2946 11.5838 21.6219 11.5838 21.207 11.9987L16.957 16.2487C16.5421 16.6637 16.5421 17.3363 16.957 17.7512L21.207 22.0012C21.6219 22.4162 22.2946 22.4162 22.7095 22.0012C23.1245 21.5863 23.1245 20.9137 22.7095 20.4987L19.2109 17L22.7095 13.5013ZM17.0428 11.9987C17.4578 12.4136 17.4578 13.0864 17.0428 13.5013L13.5442 17L17.0428 20.4987C17.4578 20.9137 17.4578 21.5863 17.0428 22.0012C16.6279 22.4162 15.9553 22.4162 15.5403 22.0012L11.2903 17.7512C10.8754 17.3363 10.8754 16.6637 11.2903 16.2487L15.5403 11.9987C15.9553 11.5838 16.6279 11.5838 17.0428 11.9987Z" fill="#1C274C"/>
+        </svg>
+        <p class="number-pagination">1</p>
+        <p class="number-pagination">2</p>
+        <p class="number-pagination">3</p>
+        <p class="number-pagination">4</p>
+        <p class="number-pagination">5</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M31.1666 17C31.1666 10.3217 31.1666 6.98263 29.0919 4.90798C27.0173 2.83331 23.6781 2.83331 16.9999 2.83331C10.3217 2.83331 6.98257 2.83331 4.90792 4.90798C2.83325 6.98263 2.83325 10.3217 2.83325 17C2.83325 23.6781 2.83325 27.0174 4.90792 29.0919C6.98257 31.1666 10.3217 31.1666 16.9999 31.1666C23.6781 31.1666 27.0173 31.1666 29.0919 29.0919C31.1666 27.0174 31.1666 23.6781 31.1666 17ZM11.2903 13.5013C10.8754 13.0864 10.8754 12.4136 11.2903 11.9987C11.7052 11.5838 12.378 11.5838 12.7929 11.9987L17.0428 16.2487C17.4578 16.6637 17.4578 17.3363 17.0428 17.7512L12.7929 22.0012C12.378 22.4162 11.7052 22.4162 11.2903 22.0012C10.8754 21.5863 10.8754 20.9137 11.2903 20.4987L14.7889 17L11.2903 13.5013ZM16.957 11.9987C16.5421 12.4136 16.5421 13.0864 16.957 13.5013L20.4556 17L16.957 20.4987C16.5421 20.9137 16.5421 21.5863 16.957 22.0012C17.3719 22.4162 18.0446 22.4162 18.4595 22.0012L22.7095 17.7512C23.1245 17.3363 23.1245 16.6637 22.7095 16.2487L18.4595 11.9987C18.0446 11.5838 17.3719 11.5838 16.957 11.9987Z" fill="#1C274C"/>
+        </svg>
+    </div>
 </main>
   <style>
-.header,.conteudo{
+.header,.conteudo,footer{
     display: none;
 }
 </style>
@@ -198,7 +203,6 @@ $( window ).on("load", function() { // Garante que todo o site seja carregado
         setTimeout(function() {
             // Esconde a div de loading e mostra a div de conteúdo após o "carregamento"
             $(".body").delay(550).fadeOut('slow');
-            $(".header").delay(350).fadeIn();
             $(".conteudo").delay(350).fadeIn();
         }, 3000);
     })

@@ -134,7 +134,7 @@ nav .onglets p {
 }
 
 .cards .card:hover {
-  transform: scale(1.1);
+  transform: translateY(-5px);
 }
 
 .cards .card .img-main {
@@ -651,7 +651,7 @@ footer .social-media p {
 }
 
 .cards-news .card-news:hover {
-  transform: scale(1.1);
+  transform: translateY(-5px);
 }
 
 .cards-news .card-news .img-main {
@@ -763,7 +763,7 @@ footer .social-media p {
 }
 
 .cards-shop .card-shop:hover {
-  transform: scale(1.1);
+  transform: translateY(-5px);
 }
 
 .cards-shop .card-shop .img-main {
@@ -812,4 +812,487 @@ footer .social-media p {
   margin: 10px;
   border-radius: 10px;
   background: #D9D9D9;
+}
+
+.box-iframe {
+  display: flex;
+  margin: 4rem 12rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box-marketplace {
+  display: flex;
+  align-items: center;
+}
+
+.box-marketplace a {
+  text-decoration: none;
+}
+
+#filter-iframe {
+  border: 1px solid #CCC;
+  border-radius: 0;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px;
+  width: 14%;
+  color: #666;
+}
+
+.filter-item-shop {
+  border: #003879 solid 2px;
+  border-radius: 10px;
+  width: 30rem;
+}
+
+.main-shop {
+  margin: 20px;
+  display: flex;
+}
+
+.cards-shop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cards-shop .card-shop {
+  margin: 20px;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.cards-shop .card-shop:hover {
+  transform: translateY(-5px);
+}
+
+.cards-shop .card-shop .img-main {
+  max-width: 350px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cards-shop .card-shop .img-main img {
+  max-width: 350px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.cards-shop .card-shop .card-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cards-shop .card-shop .card-header .title {
+  margin: 10px;
+}
+
+.cards-shop .card-shop .card-header .price {
+  margin: 8px 10px 0 0;
+}
+
+.cards-shop .card-shop .card-body {
+  display: flex;
+  align-items: center;
+}
+
+.cards-shop .card-shop .card-body p {
+  margin: 10px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 60px 0;
+}
+
+.number-pagination {
+  padding: 7px 14px;
+  margin: 10px;
+  border-radius: 10px;
+  background: #D9D9D9;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .custom-select {
+    background: #EFEFEF url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/392/select-arrow.png) 95% 50% no-repeat;
+  }
+}
+.page-product {
+  background: #E7E7E7;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.col-single-product {
+  flex-basis: 35%;
+  min-width: 300px;
+}
+
+.col-single-product img {
+  max-width: 70%;
+  padding: 50px 0;
+}
+
+.col-single-product h1 {
+  font-size: 50px;
+  line-height: 60px;
+  margin: 25px 0;
+}
+
+.btn-single-product {
+  display: inline-block;
+  color: #ffffff;
+  padding: 8px 30px;
+  margin: 14px 0 0 0;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.5s;
+  font-size: 1em;
+  width: 100%;
+  font-weight: bold;
+}
+
+.btn-single-product-cart {
+  background: #1C274C;
+  text-align: center;
+}
+
+.btn-single-product-now {
+  background: #FCC530;
+  text-align: center;
+}
+
+.btn-single-product-cart:hover {
+  background: #020307;
+}
+
+.btn-single-product-now:hover {
+  background: #856819;
+}
+
+.title-description-product {
+  display: flex;
+  align-items: center;
+}
+
+/* single product details */
+.img-single-main {
+  background-color: #D9D9D9;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.single-product .col-single-product img {
+  padding: 0;
+}
+
+.single-product .col-single-product {
+  padding: 20px;
+}
+
+.single-product h4 {
+  margin: 20px 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.single-product select {
+  display: block;
+  padding: 10px;
+  margin: 20px 20px 0 0;
+}
+
+.single-product input {
+  width: 50px;
+  height: 35px;
+  padding-left: 10px;
+  margin-right: 10px;
+  border: 1px solid #1C274C;
+}
+
+input:focus {
+  outline: none;
+}
+
+.single-product .fas {
+  color: #1C274C;
+  margin-left: 10px;
+}
+
+.small-img-row {
+  display: flex;
+  justify-content: space-between;
+  width: 6.4%;
+  flex-direction: column;
+  margin-left: 7rem;
+}
+
+.small-img-col {
+  flex-basis: 24%;
+  cursor: pointer;
+  background-color: #D9D9D9;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.box-price {
+  display: flex;
+  align-items: center;
+}
+
+.box-type-qtd {
+  display: flex;
+  align-items: baseline;
+}
+
+.description-product {
+  margin-top: 32px;
+}
+
+.text-description-product {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 115px;
+  background: #F6F6F6;
+}
+
+/* media query for less than 600 screen size */
+@media only screen and (max-width: 600px) {
+  .row {
+    text-align: center;
+  }
+  .col-single-product {
+    flex-basis: 100%;
+  }
+  .single-product .row {
+    text-align: left;
+  }
+  .single-product .col-single-product {
+    padding: 20px 0;
+  }
+  .single-product h1 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+  .cart-info p {
+    display: none;
+  }
+}
+/*
+I wanted to go with a mobile first approach, but it actually lead to more verbose CSS in this case, so I've gone web first. Can't always force things...
+
+Side note: I know that this style of nesting in SASS doesn't result in the most performance efficient CSS code... but on the OCD/organizational side, I like it. So for CodePen purposes, CSS selector performance be damned.
+*/
+/* Global settings */
+/* Global "table" column settings */
+.product-image {
+  float: left;
+  width: 20%;
+}
+
+.product-details {
+  float: left;
+  width: 37%;
+}
+
+.product-price {
+  float: left;
+  width: 12%;
+}
+
+.product-quantity {
+  float: left;
+  width: 10%;
+}
+
+.product-removal {
+  float: left;
+  width: 9%;
+}
+
+.product-line-price {
+  float: left;
+  width: 12%;
+  text-align: right;
+}
+
+/* This is used as the traditional .clearfix class */
+.group:before, .shopping-cart:before, .column-labels:before, .product:before, .totals-item:before,
+.group:after,
+.shopping-cart:after,
+.column-labels:after,
+.product:after,
+.totals-item:after {
+  content: "";
+  display: table;
+}
+
+.group:after, .shopping-cart:after, .column-labels:after, .product:after, .totals-item:after {
+  clear: both;
+}
+
+.group, .shopping-cart, .column-labels, .product, .totals-item {
+  zoom: 1;
+}
+
+/* Apply clearfix in a few places */
+/* Apply dollar signs */
+.product .product-price:before, .product .product-line-price:before, .totals-value:before {
+  content: "$";
+}
+
+/* Body/Header stuff */
+/* Column headers */
+.column-labels label {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+.column-labels .product-image, .column-labels .product-details, .column-labels .product-removal {
+  text-indent: -9999px;
+}
+
+/* Product entries */
+.product {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+.product .product-image {
+  text-align: center;
+}
+.product .product-image img {
+  width: 100px;
+}
+.product .product-details .product-title {
+  margin-right: 20px;
+  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
+}
+.product .product-details .product-description {
+  margin: 5px 20px 5px 0;
+  line-height: 1.4em;
+}
+.product .product-quantity input {
+  width: 40px;
+}
+.product .remove-product {
+  border: 0;
+  padding: 0px;
+  background-color: #D9D9D9;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 20px;
+}
+.product .remove-product:hover {
+  background-color: #969696;
+}
+
+/* Totals section */
+.totals .totals-item {
+  float: right;
+  clear: both;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.totals .totals-item label {
+  float: left;
+  clear: both;
+  width: 79%;
+  text-align: right;
+}
+.totals .totals-item .totals-value {
+  float: right;
+  width: 21%;
+  text-align: right;
+}
+.totals .totals-item-total {
+  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
+}
+
+.checkout {
+  float: right;
+  border: 0;
+  margin-top: 20px;
+  padding: 6px 25px;
+  background-color: #6b6;
+  color: #fff;
+  font-size: 25px;
+  border-radius: 3px;
+}
+
+.checkout:hover {
+  background-color: #494;
+}
+
+/* Make adjustments for tablet */
+@media screen and (max-width: 650px) {
+  .shopping-cart {
+    margin: 0;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+  }
+  .column-labels {
+    display: none;
+  }
+  .product-image {
+    float: right;
+    width: auto;
+  }
+  .product-image img {
+    margin: 0 0 10px 10px;
+  }
+  .product-details {
+    float: none;
+    margin-bottom: 10px;
+    width: auto;
+  }
+  .product-price {
+    clear: both;
+    width: 70px;
+  }
+  .product-quantity {
+    width: 100px;
+  }
+  .product-quantity input {
+    margin-left: 20px;
+  }
+  .product-quantity:before {
+    content: "x";
+  }
+  .product-removal {
+    width: auto;
+  }
+  .product-line-price {
+    float: right;
+    width: 70px;
+  }
+}
+/* Make more adjustments for phone */
+@media screen and (max-width: 350px) {
+  .product-removal {
+    float: right;
+  }
+  .product-line-price {
+    float: right;
+    clear: left;
+    width: auto;
+    margin-top: 10px;
+  }
+  .product .product-line-price:before {
+    content: "Item Total: $";
+  }
+  .totals .totals-item label {
+    width: 60%;
+  }
+  .totals .totals-item .totals-value {
+    width: 40%;
+  }
 }/*# sourceMappingURL=style.css.map */
