@@ -113,67 +113,86 @@ nav .onglets p {
 /* Fin du header */
 /* Section principale */
 .main {
-  margin: 20px;
-  margin-top: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: start;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 16px;
+  margin: 0 auto;
+  margin-top: 80px;
 }
 
 /* Toutes les cartes */
 .cards {
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 100%;
 }
 
 .cards .card {
-  margin-right: 20px;
   cursor: pointer;
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 12px 15px rgba(0, 0, 0, 0.0784313725);
+  margin: 0 auto;
+  max-width: 400px;
 }
 
 .cards .card:hover {
   transform: translateY(-5px);
+  box-shadow: 8px 16px 20px rgba(0, 0, 0, 0.0352941176);
+}
+
+.box-info-main {
+  padding: 24px 20px;
 }
 
 .cards .card .img-main {
-  max-width: 350px;
+  width: 100%;
+  height: 350px;
 }
 
 .cards .card .img-main img {
-  max-width: 350px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .cards .card .card-header {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
 }
 
 .cards .card .card-header .title {
-  margin: 10px;
-}
-
-.cards .card .card-header .price {
-  margin: 8px 10px 0 0;
+  margin: 0;
 }
 
 .cards .card .card-body {
   display: flex;
   align-items: center;
+  gap: 8px;
 }
 
 .cards .card .card-body p {
-  margin: 10px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 24px;
 }
 
 /* Fin de toutes les cartes */
 /* Video de présentation */
 .main .video {
   margin-top: 80px;
-  width: 90%;
+  width: 100%;
 }
 
 .main .video iframe {
@@ -215,9 +234,6 @@ footer .social-media p {
 @media screen and (max-width: 640px) {
   nav .onglets .link, nav h1 {
     display: none;
-  }
-  .cards .card img {
-    width: 300px;
   }
 }
 :root {
