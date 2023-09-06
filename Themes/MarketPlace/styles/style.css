@@ -1108,64 +1108,20 @@ I wanted to go with a mobile first approach, but it actually lead to more verbos
 Side note: I know that this style of nesting in SASS doesn't result in the most performance efficient CSS code... but on the OCD/organizational side, I like it. So for CodePen purposes, CSS selector performance be damned.
 */
 /* Global settings */
-/* Global "table" column settings */
-.product-image {
-  float: left;
-  width: 20%;
-}
-
-.product-details {
-  float: left;
-  width: 37%;
-}
-
-.product-price {
-  float: left;
-  width: 12%;
-}
-
-.product-quantity {
-  float: left;
-  width: 10%;
-}
-
-.product-removal {
-  float: left;
-  width: 9%;
-}
-
-.product-line-price {
-  float: left;
-  width: 12%;
-  text-align: right;
-}
-
-/* This is used as the traditional .clearfix class */
-.group:before, .shopping-cart:before, .column-labels:before, .product:before, .totals-item:before,
-.group:after,
-.shopping-cart:after,
-.column-labels:after,
-.product:after,
-.totals-item:after {
-  content: "";
-  display: table;
-}
-
-.group:after, .shopping-cart:after, .column-labels:after, .product:after, .totals-item:after {
-  clear: both;
-}
-
-.group, .shopping-cart, .column-labels, .product, .totals-item {
-  zoom: 1;
-}
-
-/* Apply clearfix in a few places */
-/* Apply dollar signs */
-.product .product-price:before, .product .product-line-price:before, .totals-value:before {
-  content: "$";
+/*
+// /* Global "table" column settings */
+.shopping-cart {
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
 }
 
 /* Body/Header stuff */
+/* Content */
+.conteudo {
+  background-color: #E7E7E7;
+}
+
 /* Column headers */
 .column-labels label {
   padding-bottom: 15px;
@@ -1176,30 +1132,48 @@ Side note: I know that this style of nesting in SASS doesn't result in the most 
   text-indent: -9999px;
 }
 
-/* Product entries */
-.product {
-  margin-bottom: 20px;
-  padding-bottom: 10px;
+/* Product area */
+.product-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.product-area .product-list {
+  background: #fff;
+}
+.product-area .product-list .product {
+  width: 766px;
+  display: flex;
+  padding: 10px 0px;
   border-bottom: 1px solid #eee;
 }
-.product .product-image {
+.product-area .product-list .product .product-image {
   text-align: center;
+  border: 1px solid #b5b5b5;
+  border-radius: 12px;
+  margin-left: 15px;
+  padding: 10px;
 }
-.product .product-image img {
+.product-area .product-list .product .product-image img {
   width: 100px;
 }
-.product .product-details .product-title {
-  margin-right: 20px;
-  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
+.product-area .product-list .product .product-details {
+  margin: 0px 10px;
 }
-.product .product-details .product-description {
-  margin: 5px 20px 5px 0;
-  line-height: 1.4em;
+.product-area .product-list .product .product-details .product-title {
+  font-size: 14px;
 }
-.product .product-quantity input {
+.product-area .product-list .product .product-details .product-description {
+  font-size: 10px;
+}
+.product-area .product-list .product .product-actions {
+  display: flex;
+  align-items: baseline;
+}
+.product-area .product-list .product .product-actions .product-quantity {
   width: 40px;
 }
-.product .remove-product {
+.product-area .product-list .product .product-actions .remove-product {
   border: 0;
   padding: 0px;
   background-color: #D9D9D9;
@@ -1207,45 +1181,58 @@ Side note: I know that this style of nesting in SASS doesn't result in the most 
   font-size: 12px;
   border-radius: 20px;
 }
-.product .remove-product:hover {
+.product-area .product-list .product .product-actions .remove-product:hover {
   background-color: #969696;
 }
 
+.checkout-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* Totals section */
-.totals .totals-item {
-  float: right;
-  clear: both;
+.totals {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: #fff;
+  width: 521px;
+  height: 288px;
+  border-radius: 7px;
+}
+.totals .totals-summary {
+  padding: 10px;
+  font-family: monospace;
+}
+.totals .totals-summary h1 {
+  font-size: 24px;
+}
+.totals .totals-summary .totals-item {
   width: 100%;
   margin-bottom: 10px;
+  font-size: 24px;
 }
-.totals .totals-item label {
-  float: left;
-  clear: both;
-  width: 79%;
-  text-align: right;
-}
-.totals .totals-item .totals-value {
+.totals .totals-summary .totals-item .totals-value {
   float: right;
-  width: 21%;
   text-align: right;
 }
 .totals .totals-item-total {
   font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
 }
-
-.checkout {
-  float: right;
+.totals .checkout-button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.totals .checkout-button .checkout {
   border: 0;
-  margin-top: 20px;
-  padding: 6px 25px;
-  background-color: #6b6;
+  width: 470px;
+  height: 85px;
+  background-color: #1C274C;
   color: #fff;
   font-size: 25px;
-  border-radius: 3px;
-}
-
-.checkout:hover {
-  background-color: #494;
+  border-radius: 14px;
 }
 
 /* Make adjustments for tablet */
