@@ -13,7 +13,7 @@
 </head>
 <body>
 <header class="header">
-	<nav>
+	<nav class="nav-bar default-centralize">
 		<h1>LOGO</h1>
 		<div class="onglets">
 			<p class="link active-nav-bar">Inicio</p>

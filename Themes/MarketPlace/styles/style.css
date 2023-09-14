@@ -2,44 +2,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://cdn.skypack.dev/that-3d-text-library/lib/styles.css");
 @import url("https://fonts.googleapis.com/css2?family=Bakbak+One&family=Caprasimo&family=Chonburi&family=Graduate&family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 body {
   margin: 0px;
   padding: 0px;
   font-family: "Open Sans", sans-serif;
 }
 
-/* Barre de navigation */
-nav {
+.header {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.13);
   background: rgba(250, 250, 250, 0.8);
-  height: 91px;
+  height: 90px;
   box-sizing: border-box;
-  justify-content: space-around;
-  align-content: center;
-  align-items: center;
 }
-
-nav h1 {
+.header .nav-bar {
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .nav-bar h1 {
   font-size: 20px;
 }
-
-nav .onglets {
+.header .nav-bar .onglets {
   display: flex;
   align-items: center;
 }
-
-nav .onglets p {
+.header .nav-bar .onglets p {
   margin-right: 35px;
   cursor: pointer;
-  width: 76px;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 23px;
   color: #000000;
   text-align: center;
   font: 600 20px "Inter", sans-serif;
 }
 
+/* Barre de navigation */
 .active-nav-bar {
   border-style: solid;
   border-color: #fcc530;
@@ -1108,18 +1112,46 @@ I wanted to go with a mobile first approach, but it actually lead to more verbos
 Side note: I know that this style of nesting in SASS doesn't result in the most performance efficient CSS code... but on the OCD/organizational side, I like it. So for CodePen purposes, CSS selector performance be damned.
 */
 /* Global settings */
-/*
-// /* Global "table" column settings */
-.shopping-cart {
-  display: flex;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.default-centralize {
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.body {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+body {
+  height: 100vh;
+}
+
+main {
   height: 100%;
-  justify-content: space-around;
 }
 
 /* Body/Header stuff */
 /* Content */
 .conteudo {
   background-color: #E7E7E7;
+}
+
+.shopping-cart {
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+  gap: 20px;
 }
 
 /* Column headers */
@@ -1134,98 +1166,192 @@ Side note: I know that this style of nesting in SASS doesn't result in the most 
 
 /* Product area */
 .product-area {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .product-area .product-list {
   background: #fff;
+  margin-top: 20px;
+  border-radius: 7px;
 }
 .product-area .product-list .product {
-  width: 766px;
+  width: 100%;
   display: flex;
-  padding: 10px 0px;
-  border-bottom: 1px solid #eee;
+  padding: 16px 0px;
+  border-bottom: 2px solid #E7E7E7;
+  font-family: "Inter", sans-serif;
 }
 .product-area .product-list .product .product-image {
   text-align: center;
   border: 1px solid #b5b5b5;
   border-radius: 12px;
-  margin-left: 15px;
-  padding: 10px;
+  padding: 12px;
+  margin-left: 16px;
 }
 .product-area .product-list .product .product-image img {
   width: 100px;
 }
 .product-area .product-list .product .product-details {
-  margin: 0px 10px;
+  margin-left: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.product-area .product-list .product .product-details .product-detail-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.product-area .product-list .product .product-details .product-detail-text .product-title {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.product-area .product-list .product .product-details .product-detail-text .product-description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.product-area .product-list .product .product-details .input-quantity {
+  display: flex;
+  align-items: center;
+}
+.product-area .product-list .product .product-details .input-quantity .product-quantity {
+  text-align: center;
+  border: none;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 0px;
+  height: 22px;
+  width: 100%;
+  max-width: 16%;
+}
+.product-area .product-list .product .product-details .input-quantity .value-button {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 0px;
+  width: 40px;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.product-area .product-list .product .product-details .input-quantity .increase {
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0 8px 8px 0;
+}
+.product-area .product-list .product .product-details .input-quantity .decrease {
+  border-left: 1px solid #ddd;
+  border-radius: 8px 0 0 8px;
+}
+.product-area .product-list .product .product-details .input-quantity .value-button:hover {
+  cursor: pointer;
+}
+.product-area .product-list .product .product-details .input-quantity #decrease {
+  border-left: 1px solid #ddd;
+  border-radius: 8px 0 0 8px;
+}
+.product-area .product-list .product .product-details .input-quantity #increase {
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0 8px 8px 0;
+}
+.product-area .product-list .product .product-details .input-quantity input[type=number]::-webkit-inner-spin-button,
+.product-area .product-list .product .product-details .input-quantity input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .product-area .product-list .product .product-details .product-title {
-  font-size: 14px;
+  font-size: 16px;
 }
 .product-area .product-list .product .product-details .product-description {
-  font-size: 10px;
+  font-size: 12px;
 }
 .product-area .product-list .product .product-actions {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  width: 80%;
+  align-items: flex-end;
+  justify-content: space-around;
+  margin-right: 16px;
 }
-.product-area .product-list .product .product-actions .product-quantity {
-  width: 40px;
-}
-.product-area .product-list .product .product-actions .remove-product {
+.product-area .product-list .product .product-actions .action-remove .remove-product {
   border: 0;
   padding: 0px;
   background-color: #D9D9D9;
   color: #fff;
   font-size: 12px;
   border-radius: 20px;
+  margin: 10px 0px;
+  cursor: pointer;
 }
-.product-area .product-list .product .product-actions .remove-product:hover {
+.product-area .product-list .product .product-actions .action-remove .remove-product:hover {
   background-color: #969696;
+}
+.product-area .product-list .product .product-actions .action-value {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.product-area .product-list .product .product-actions .action-value .product-price {
+  font-size: 24px;
 }
 
 .checkout-area {
+  width: 100%;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 20px;
+  /* Totals section */
 }
-
-/* Totals section */
-.totals {
+.checkout-area .totals {
+  padding: 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   background: #fff;
-  width: 521px;
+  width: 100%;
   height: 288px;
   border-radius: 7px;
 }
-.totals .totals-summary {
+.checkout-area .totals .totals-summary {
   padding: 10px;
   font-family: monospace;
 }
-.totals .totals-summary h1 {
+.checkout-area .totals .totals-summary h1 {
+  font-family: "Open Sans", sans-serif;
   font-size: 24px;
 }
-.totals .totals-summary .totals-item {
+.checkout-area .totals .totals-summary .totals-item {
   width: 100%;
   margin-bottom: 10px;
+  font-family: "Inter", sans-serif;
   font-size: 24px;
 }
-.totals .totals-summary .totals-item .totals-value {
+.checkout-area .totals .totals-summary .totals-item .totals-value {
   float: right;
   text-align: right;
 }
-.totals .totals-item-total {
+.checkout-area .totals .totals-item-total {
   font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
 }
-.totals .checkout-button {
+.checkout-area .totals .checkout-button {
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
 }
-.totals .checkout-button .checkout {
+.checkout-area .totals .checkout-button .checkout {
   border: 0;
   width: 470px;
   height: 85px;
@@ -1250,11 +1376,11 @@ Side note: I know that this style of nesting in SASS doesn't result in the most 
     width: auto;
   }
   .product-image img {
-    margin: 0 0 10px 10px;
+    margin: 0 0 12px 12px;
   }
   .product-details {
     float: none;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     width: auto;
   }
   .product-price {
