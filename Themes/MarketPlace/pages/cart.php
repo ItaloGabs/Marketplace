@@ -33,22 +33,22 @@
             </div>
           </div>
           <div class="product-actions">
-              <div class="action-remove">
-                <button class="remove-product">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="32" viewBox="0 0 35 32" fill="none">
-                        <path d="M14.7432 8C15.1466 6.83481 16.2351 6 17.5146 6C18.7941 6 19.8826 6.83481 20.286 8" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
-                        <path d="M25.8403 10H9.18799" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
-                        <path d="M24.2079 12.5L23.7573 19.3991C23.5839 22.054 23.4972 23.3815 22.6499 24.1907C21.8026 25 20.4994 25 17.8931 25H17.1356C14.5292 25 13.226 25 12.3787 24.1907C11.5314 23.3815 11.4447 22.054 11.2713 19.3991L10.8208 12.5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
-                        <path d="M15.0654 15L15.5552 20" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
-                        <path d="M19.9629 15L19.4731 20" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
-                    </svg>
-                </button>
-              </div>
-              <div class="action-value">
-                <img src="<?php echo get_stylesheet_directory_uri();?>/assets/img/image-10.png" alt="" srcset="">
-                <p class="product-price">12.99</p>
-              </div>
-              </div>
+            <div class="action-remove">
+              <button class="remove-product">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="32" viewBox="0 0 35 32" fill="none">
+                      <path d="M14.7432 8C15.1466 6.83481 16.2351 6 17.5146 6C18.7941 6 19.8826 6.83481 20.286 8" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                      <path d="M25.8403 10H9.18799" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                      <path d="M24.2079 12.5L23.7573 19.3991C23.5839 22.054 23.4972 23.3815 22.6499 24.1907C21.8026 25 20.4994 25 17.8931 25H17.1356C14.5292 25 13.226 25 12.3787 24.1907C11.5314 23.3815 11.4447 22.054 11.2713 19.3991L10.8208 12.5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                      <path d="M15.0654 15L15.5552 20" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                      <path d="M19.9629 15L19.4731 20" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+              </button>
+            </div>
+            <div class="action-value">
+              <img src="<?php echo get_stylesheet_directory_uri();?>/assets/img/image-10.png" alt="" srcset="">
+              <p class="product-price">12.99</p>
+            </div>
+          </div>
         </div>
   
         <div class="product">
