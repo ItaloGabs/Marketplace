@@ -1124,27 +1124,15 @@ Side note: I know that this style of nesting in SASS doesn't result in the most 
   margin: 0 auto;
 }
 
-.body {
-  position: fixed;
-  z-index: 2;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-}
-
 body {
   height: 100vh;
 }
 
-main {
-  height: 100%;
-}
-
 /* Body/Header stuff */
 /* Content */
-.conteudo {
+.cart-content {
   background-color: #E7E7E7;
+  height: calc(100% - 173px);
 }
 
 .shopping-cart {

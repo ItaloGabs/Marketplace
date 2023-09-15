@@ -12,7 +12,7 @@
     </div>
     </div> 
  </section>
- <main class="conteudo">
+ <main class="conteudo cart-content">
     <div class="shopping-cart default-centralize">
 
     <div class="product-area">
