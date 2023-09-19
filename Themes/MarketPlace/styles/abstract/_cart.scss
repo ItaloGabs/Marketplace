@@ -34,7 +34,7 @@ body {
 /* Content */
 .cart-content {
   background-color: #E7E7E7;
-  height: calc(100% - 173px);
+  min-height: calc(100% - 173px);
 }
 
 .shopping-cart {
@@ -88,7 +88,7 @@ body {
       }
       
       .product-details {
-        margin-left: 10px;
+        margin: 0 8px;
         width: 100%;
 
         display: flex;
@@ -118,7 +118,7 @@ body {
         .input-quantity {
           display: flex;
           align-items: center;
-
+          margin-top: 12px;
           .product-quantity {
             text-align: center;
             border: none;
@@ -129,7 +129,6 @@ body {
             width: 100%;
             max-width: 16%;
           }
-
           .value-button {
             border-top: 1px solid #ddd;
             border-bottom: 1px solid #ddd;
@@ -141,7 +140,6 @@ body {
             user-select: none;
 
           }
-
           .increase {
             border-right: 1px solid #ddd;
             display: flex;
@@ -149,21 +147,17 @@ body {
             justify-content: center;
             border-radius: 0 8px 8px 0;
           }
-
           .decrease {
             border-left: 1px solid #ddd;
             border-radius: 8px 0 0 8px;
           }
-
           .value-button:hover {
             cursor: pointer;
           }
-
           #decrease {
             border-left: 1px solid #ddd;
             border-radius: 8px 0 0 8px;
           }
-
           #increase {
             border-right: 1px solid #ddd;
             display: flex;
@@ -193,7 +187,7 @@ body {
         flex-direction: column;
         width: 80%;
         align-items: flex-end;
-        justify-content: space-around;
+        justify-content: space-between;
         margin-right: 16px;
 
         .action-remove {
@@ -278,12 +272,13 @@ body {
         justify-content: center;
         .checkout {
           border: 0;
-          width: 470px;
+          width: 100%;
           height: 85px;
           background-color: #1C274C;
           color: #fff;
           font-size: 25px;
           border-radius: 14px;
+          cursor: pointer;
         }
       }
     }
@@ -293,7 +288,7 @@ body {
 @media only screen and (max-width: 650px) {
   .cart-content {
     background-color: #E7E7E7;
-    height: 100%;
+    height: auto;
     
   }
 
@@ -308,7 +303,7 @@ body {
   }
 
   .default-centralize {
-    padding: 0 20px;
+    padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -319,7 +314,6 @@ body {
   
   .product-details {
     float: none;
-    margin-bottom: 12px;
     width: auto;
   }
   
@@ -342,6 +336,11 @@ body {
   .product-line-price {
     float: right;
     width: 70px;
+  }
+
+  .checkout-area {
+    max-width: none;
+    margin: 0;
   }
   
 }

@@ -1,5 +1,5 @@
  <?php wp_footer(); ?>
-    <footer>
+    <footer class="footer-area">
           <p>&copy; Eviltsuma.Todos Os Direitos Reservados</p>
           <div class="social-media">
           <p><i class="fab fa-facebook-f"></i></p>

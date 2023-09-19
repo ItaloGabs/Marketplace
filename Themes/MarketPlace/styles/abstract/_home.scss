@@ -15,16 +15,18 @@ body{
   .nav-bar {
     display: flex;
     height: 100%;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    .nav-bar-mobile {
+      display: none;
+    }
     h1{
       font-size: 20px;
     }
     .onglets{
       display: flex;
       align-items: center;
-      p{
+      .nav-list{
           margin-right: 35px;
           cursor:pointer;
           width: fit-content;
@@ -32,6 +34,11 @@ body{
           color: #000000;
           text-align: center;
           font: 600 20px "Inter", sans-serif;
+          list-style: none;
+          a {
+            text-decoration: none;
+            color: #000000;
+          }
       }
     }
   }
@@ -64,9 +71,7 @@ body{
 .icons-nav-bar {
     display: flex;
     align-items: center;
-}
-.profile-icon-user {
-  margin-right: 20px;
+    gap: 20px;
 }
 .profile-icon-user.bold-duotone-users-user-circle {
   // position: absolute;
@@ -223,8 +228,84 @@ footer .social-media p{
 /* Fin du pied de page */
 
 @media screen and (max-width: 640px){
-  nav .onglets .link, nav h1{
-    display:none;
+  .header {
+    .nav-bar {
+      .nav-links {
+        display: block;
+        .onglets{
+          width: 100%;
+          position: absolute;
+          top: 90px;
+          right: 0px;
+          width: 0;
+          background: rgba(255, 255, 255, 0.86);
+          flex-direction: column;
+          height: fit-content;
+          padding: 32px 0;
+          gap: 12px;
+          backdrop-filter: blur(1px);
+          transition: all 0.3s;
+          overflow: hidden;
+          &.active{
+            right: 0;
+            width: 100%;
+            padding: 32px 12px
+          }
+          .nav-list{
+              margin: 0px;
+              color: #000000;
+              padding: 0px 16px;
+              font-size: 17px;
+              display: block;
+              .link {
+                color: black;
+              }
+          }
+          .cart-background {
+            width: 100%;
+            padding: 8px;
+            border-radius: 24px;
+            .carrinho {
+              display: none;
+              height: 28px;
+            }
+            .bold-duotone-shopping-ecommerce-cart-large {
+              width: 32px;
+            }
+          }
+          .icons-nav-bar {
+            gap: 12px;
+            .profile-icon-user {
+              display: none;
+            }
+          }
+        }
+      }
+      .nav-bar-mobile {
+        display: flex;
+        align-items: center;
+        .profile-icon-user-mobile {
+          margin: 0;
+        }
+      }
+      .burger-menu {
+        color: white;
+        padding: 14px 16px;
+        font-size: 17px;
+        display: block;
+        cursor: pointer;
+        .burger-line {
+          width: 25px;
+          height: 3px;
+          background-color: #000000;
+          margin: 5px;
+        }
+      }
+    }
+  }
+
+  .footer-area {
+    gap: 20px;
   }
 }
 
