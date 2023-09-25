@@ -11,7 +11,7 @@
         <div class="air"></div>
     </div>
     </div> 
- </section>
+</section>
  <main class="conteudo cart-content">
     <div class="shopping-cart default-centralize">
 
