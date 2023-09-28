@@ -9,72 +9,78 @@ $black: hsl(0, 0%, 0%);
 .order-content {
   background-color: #E7E7E7;
   // min-height: calc(100% - 520px);
-  min-width: calc(100vh - 130px);
+  // min-width: calc(100vh - 130px);
   display: flex;
   flex-direction: column;
   align-items: center;
   .step-area {
-    margin: 50px auto;
-    #steps {
-      .step {
-        width: 40px;
-        height: 40px;
-        background-color: $white;
-        display: inline-block;
-        border-color: transparent;
-        border-radius: 50%;
-        
-        color: $black;
-        font-weight: 600;
-        text-align: center;
-        line-height: 35px;
-      }
-      .step:first-child {
-        line-height: 40px;
-      }
-      .step:nth-child(n+2) {
-        margin: 0 0 0 100px;
-        transform: translate(0, -4px);
-      }
-      .step:nth-child(n+2):before {
-        width: 75px;
-        height: 3px;
-        display: block;
-        background-color: $white;
-        transform: translate(-95px, 21px);
-        content: '';  
-      }
-      .step:after {
-        width: 150px;
-        display: block;
-        transform: translate(-55px, 3px);
-        
-        color: $grey;
-        content: attr(data-desc);
-        font-weight: 400;
-        font-size: 13px;
-      }
-      .step:first-child:after {
-        transform: translate(-55px, -1px);  
-      }
-      .step.active {
-        background-color: $blue;
-        
-        color: $white;
-      }
-      .step.active:before {
-        background: linear-gradient(to right, $green 0%, $blue 100%);
-      }
-      .step.active:after {
-        color: $blue;  
-      }
-      .step.done {
-        background-color: $green;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+    .step {
+      width: 100%;
+      max-width: 500px;
+      display: grid;
+      justify-items: center;
+      gap: 8px;
+      position: relative;
+    }
 
-        color: $white;
+    .step-rounded{
+      background-color: $green;
+      color: $white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        &:first-child {
+          color: $white;
+          font-weight: 600;
+          text-align: center;
+        }
       }
-      .step.done:before {
-        background-color: $green;  
+    }
+
+    .step:nth-child(n+2):before {
+      width: 100px;
+      max-width: 96px;
+      height: 3px;
+      display: block;
+      position:absolute;
+      background-color: $green;
+      transform: translate(-95px, 21px);
+      margin-left: 20px;
+      content: '';
+    }
+
+    p{
+      &:nth-child(2){
+        text-align: center;
+        font-weight: 600;
+        color: $grey;
+      }
+    }
+
+    .step.active:before {
+      background: linear-gradient(to right, $green 0%, $blue 100%);
+    }
+
+    .step.active {
+      .step-rounded {
+        background-color: $blue;
+        p {
+          color: $white;
+        }
+      }
+
+      p {
+        color: $blue;
       }
     }
   }
@@ -86,14 +92,13 @@ $black: hsl(0, 0%, 0%);
     gap: 24px;
     margin-bottom: 36px;
     .order-box {
-      min-width: 500px;
+      min-width: 732px;
       background-color: white;
       border-radius: 8px;
-      .order-list {
-        .order-product {
-          display: flex;
-          padding: 16px;
-          font-family: "Inter", sans-serif;
+      .order-product {
+        display: flex;
+        padding: 16px;
+        font-family: "Inter", sans-serif;
           .info-order-header {
             text-align: center;
             margin-bottom: 12px;
@@ -169,7 +174,6 @@ $black: hsl(0, 0%, 0%);
             }
           }
         }
-      }
       .finish-order-area {
         padding: 16px;
         display: flex;
@@ -198,4 +202,23 @@ $black: hsl(0, 0%, 0%);
       }
     }
   }
+}
+
+@media screen and (max-width: 552px) {
+  .order-content {
+    .step-area {
+      .step:nth-child(n+2):before {
+        max-width: 76px;
+        margin-left: 60px;
+      }
+    }
+
+    .payment-area {
+      .order-box {
+        max-width: 90%;
+        min-width: 60%;
+      }
+    }
+  }
+
 }
