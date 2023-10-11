@@ -6,6 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 body {
   margin: 0px;
   padding: 0px;
@@ -1980,4 +1981,196 @@ body {
   font-size: 16px;
   font-weight: 600;
   padding: 12px;
+}
+
+.order-content {
+  background-color: #E7E7E7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.order-content .step-area {
+  margin: 60px auto;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+}
+.order-content .step-area .step {
+  width: 100%;
+  max-width: 500px;
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  position: relative;
+}
+.order-content .step-area .step-rounded {
+  background-color: hsl(120, 42%, 54%);
+  color: hsl(0, 0%, 100%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.order-content .step-area .step-rounded p:first-child {
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  text-align: center;
+}
+.order-content .step-area .step:nth-child(n+2):before {
+  width: 100px;
+  max-width: 96px;
+  height: 3px;
+  display: block;
+  position: absolute;
+  background-color: hsl(120, 42%, 54%);
+  transform: translate(-95px, 21px);
+  margin-left: 20px;
+  content: "";
+}
+.order-content .step-area p:nth-child(2) {
+  text-align: center;
+  font-weight: 600;
+  color: hsl(226, 10%, 55%);
+}
+.order-content .step-area .step.active:before {
+  background: linear-gradient(to right, hsl(120, 42%, 54%) 0%, hsl(226, 46%, 20%) 100%);
+}
+.order-content .step-area .step.active .step-rounded {
+  background-color: hsl(226, 46%, 20%);
+}
+.order-content .step-area .step.active .step-rounded p {
+  color: hsl(0, 0%, 100%);
+}
+.order-content .step-area .step.active p {
+  color: hsl(226, 46%, 20%);
+}
+.order-content .payment-area {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+.order-content .payment-area .order-box {
+  min-width: 732px;
+  background-color: white;
+  border-radius: 8px;
+}
+.order-content .payment-area .order-box .order-product {
+  display: flex;
+  padding: 16px;
+  font-family: "Inter", sans-serif;
+}
+.order-content .payment-area .order-box .order-product .info-order-header {
+  text-align: center;
+  margin-bottom: 12px;
+}
+.order-content .payment-area .order-box .order-product h4 {
+  margin-bottom: 16px;
+}
+.order-content .payment-area .order-box .order-product h5 {
+  border-bottom: 2px dashed rgba(87, 87, 87, 0.5);
+  padding-bottom: 12px;
+  color: hsl(226, 10%, 55%);
+}
+.order-content .payment-area .order-box .order-product .order-product-image {
+  text-align: center;
+  border: 1px solid #b5b5b5;
+  border-radius: 12px;
+  padding: 12px;
+}
+.order-content .payment-area .order-box .order-product .order-product-image img {
+  width: 80px;
+}
+.order-content .payment-area .order-box .order-product .order-product-details {
+  margin: 0 8px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-weight: bold;
+}
+.order-content .payment-area .order-box .order-product .order-product-details .order-product-description-order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.order-content .payment-area .order-box .order-product .order-product-details .order-product-title {
+  font-size: 16px;
+}
+.order-content .payment-area .order-box .order-product .order-product-details .order-product-description {
+  font-size: 12px;
+}
+.order-content .payment-area .order-box .order-product .order-product-details .none-margin-bottom {
+  margin-bottom: 0px;
+}
+.order-content .payment-area .order-box .order-total {
+  display: flex;
+  padding: 16px;
+}
+.order-content .payment-area .order-box .border {
+  border-top: 2px dashed rgba(87, 87, 87, 0.5);
+  padding-top: 12px;
+  border-color: hsl(226, 10%, 55%);
+  font-size: 16px;
+  width: 100%;
+}
+.order-content .payment-area .order-box .border .order-product-description-order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+.order-content .payment-area .order-box .border .order-payment-voucher {
+  display: flex;
+}
+.order-content .payment-area .order-box .border .order-payment-voucher p {
+  display: flex;
+  align-items: end;
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+}
+.order-content .payment-area .order-box .border .order-payment-voucher p:hover {
+  color: rgb(95, 95, 204);
+}
+.order-content .payment-area .order-box .finish-order-area {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.order-content .payment-area .order-box .finish-order-area .order-value {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.order-content .payment-area .order-box .finish-order-area .order-value .order-value-price {
+  font-size: 24px;
+}
+.order-content .payment-area .order-box .finish-order-area .finish-order-button .finish-button {
+  border: 0;
+  width: 100%;
+  height: 64px;
+  background-color: #1C274C;
+  color: #fff;
+  font-size: 25px;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 552px) {
+  .order-content .step-area .step:nth-child(n+2):before {
+    max-width: 76px;
+    margin-left: 60px;
+  }
+  .order-content .payment-area .order-box {
+    max-width: 90%;
+    min-width: 60%;
+  }
 }/*# sourceMappingURL=style.css.map */
