@@ -81,10 +81,10 @@ $black: hsl(0, 0%, 0%);
     display: flex;
     width: 100%;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     gap: 24px;
     .user-data-area {
-      min-width: 800px;
+      max-width: 740px;
       display: flex;
       flex-direction: column;
       gap: 12px;
@@ -98,10 +98,19 @@ $black: hsl(0, 0%, 0%);
       .address-area {
         width: 100%;
         background-color: white;
-        border-radius: 7px;
+        border-radius: 8px;
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        &.active{
+          .title-box{
+            margin-bottom: 12px;
+          }
+        }
+        .title-box {
+          display: flex;
+          justify-content: space-between;
+          cursor: pointer;
+        }
         .info-box{
           display: flex;
           flex-direction: column;
@@ -116,26 +125,29 @@ $black: hsl(0, 0%, 0%);
       }
       .add-address-area {
         background-color: white;
-        border-radius: 7px;
+        border-radius: 8px;
         display: flex;
         flex-direction: column;
+        &.active{
+          .add-address-selection{
+            margin-bottom: 12px;
+          }
+        }
         .add-address-selection{
           display: flex;
           justify-content: space-between;
-          .open-box-button {
-            cursor: pointer;
-          }
+          cursor: pointer;
         }
-        .add-address-form {
-          display: flex;
+        .accordion-body {
+          // display: none;
           flex-direction: column;
-          .address {
+          .complement {
             display: flex;
-            justify-content: space-between;
+            gap: 32px;
           }
           .state {
             display: flex;
-            justify-content: space-between;
+            gap: 32px;
           }
         }
         .form-input {
@@ -144,7 +156,6 @@ $black: hsl(0, 0%, 0%);
           .input-label {
             font-family: 'Inter', sans-serif;
             font-size: 20px;
-            margin-top: 12px;
             transition: all 0.3s;
           }
           input {
@@ -152,7 +163,7 @@ $black: hsl(0, 0%, 0%);
             color: #333;
             font-size: 16px;
             padding: 5px;
-            border-radius: 7px;
+            border-radius: 8px;
             background-color: rgb(255, 255, 255);
             border: 1px solid $black;
             width: 100%;
@@ -163,7 +174,7 @@ $black: hsl(0, 0%, 0%);
       }
       .payment-type-area {
         background-color: $white;
-        border-radius: 7px;
+        border-radius: 8px;
         display: flex;
         flex-direction: column;
         gap: 12px;
@@ -183,7 +194,7 @@ $black: hsl(0, 0%, 0%);
             outline:0;
             box-shadow:none;
             border: 1px solid $black;
-            border-radius: 7px;
+            border-radius: 8px;
             background: $white;
             background-image: none;
             flex: 1;
@@ -212,9 +223,9 @@ $black: hsl(0, 0%, 0%);
       }
     }
     .checkout-box {
-      min-width: 500px;
+      max-width: 430px;
       background-color: white;
-      border-radius: 7px;
+      border-radius: 8px;
       .checkout-list {
         .checkout-product {
           display: flex;
@@ -271,5 +282,25 @@ $black: hsl(0, 0%, 0%);
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .checkout-content {
+    background-color: #E7E7E7;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    .payment-area {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .default-centralize {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }

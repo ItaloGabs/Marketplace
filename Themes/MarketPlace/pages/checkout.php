@@ -22,49 +22,52 @@
   </div>
   <div class="payment-area default-centralize">
     <section class="user-data-area">
-      <div class="address-area box-padding">
-        <div class="title-box">
+      <div class="address-area accordion active box-padding">
+        <header class="title-box accordion-header">
           <h1 class="user-data-title">Seus dados e endereço</h1>
-        </div>
-        <div class="info-box">
-          <p class="user-data-info">Seu Nome: Faiska</p>
-          <p class="user-data-info">Email: faiskamscr@email.com</p>
-          <p class="user-data-info">Endereço: Rua dali, 1, centro</p>
-          <p class="user-data-info">Cidade/Estado: Satuba/AL</p>
-          <p class="user-data-info">CEP: 123456987</p>
-        </div>
-        <div class="link-option-box">
-          <a href="#">Usar Este</a>
-        </div>
-        <!-- <svg class="open-box-button" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M22.1663 8.16667L13.9997 15.1667L5.83301 8.16667" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M22.1663 12.8333L13.9997 19.8333L5.83301 12.8333" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg> -->
-      </div>
-      <div class="add-address-area box-padding">
-        <div class="add-address-selection">
-          <h1 class="user-data-title">Novo endereço?</h1>
           <svg class="open-box-button" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M22.1663 8.16667L13.9997 15.1667L5.83301 8.16667" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M22.1663 12.8333L13.9997 19.8333L5.83301 12.8333" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
+        </header>
+        <div class="accordion-body">
+          <div class="info-box">
+            <p class="user-data-info">Seu Nome: Faiska</p>
+            <p class="user-data-info">Email: faiskamscr@email.com</p>
+            <p class="user-data-info">Endereço: Rua dali, 1, centro</p>
+            <p class="user-data-info">Cidade/Estado: Satuba/AL</p>
+            <p class="user-data-info">CEP: 123456987</p>
+          </div>
+          <div class="link-option-box">
+            <a href="#">Usar Este</a>
+          </div>
         </div>
-        <div class="add-address-form">
+      </div>
+      <div class="add-address-area accordion box-padding">
+        <header class="add-address-selection accordion-header">
+          <h1 class="user-data-title">Novo endereço</h1>
+          <svg class="open-box-button" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.1663 8.16667L13.9997 15.1667L5.83301 8.16667" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22.1663 12.8333L13.9997 19.8333L5.83301 12.8333" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </header>
+        <div class="accordion-body">
           <div class="address">
             <div class="form-input">
               <label class="input-label" for="endereco">Endereço*</label>
               <input type="text" id="endereco">
             </div>
-            
+          </div>
+
+          <div class="complement">
+            <div class="form-input">
+              <label class="input-label" for="complemente">Complemento*</label>
+              <input type="text" id="complemento">
+            </div>
             <div class="form-input">
               <label class="input-label" for="cep">Cep*</label>
               <input type="text" id="cep">
             </div>
-          </div>
-
-          <div class="form-input">
-            <label class="input-label" for="complemente">Complemento*</label>
-            <input type="text" id="complemento">
           </div>
 
           <div class="state">
@@ -138,16 +141,19 @@
         </div>
         <div class="finish-order-button">
           <button class="finish-button">Finalizar Pedido</button>
+        </div>
       </div>
     </section>
   </div>
 </main>
 <style>
-.header,.conteudo{
+.header{
     display: none;
 }
+/* .checkout-content */
 </style>
 <script type="module" src="<?php echo get_stylesheet_directory_uri(); ?>/scripts/cart.js"></script>
+<script type="module" src="<?php echo get_stylesheet_directory_uri(); ?>/scripts/accordion.js"></script>
 <script type="module" src="<?php echo get_stylesheet_directory_uri(); ?>/scripts/loading.js"></script>
 <script>
 // Load website
@@ -156,7 +162,7 @@
             // Esconde a div de loading e mostra a div de conteúdo após o "carregamento"
             $(".body").delay(550).fadeOut('slow');
             $(".header").delay(350).fadeIn();
-            $(".conteudo").delay(350).fadeIn();
+            // $(".checkout-content").delay(350).fadeIn();
         }, 3000);
   })
 
@@ -171,8 +177,5 @@
       }
     });
   });
-</script>
-<script>
-
 </script>
 <?php get_footer(); ?>

@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.profile-content {
+  background-color: #E7E7E7;
+  min-height: calc(100% - 173px);
+  .profile-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    .profile-banner {
+      width: 100%;
+      height: auto;
+      margin-top: 24px;
+      border-radius: 8px;
+      background-color: #fff;
+      .banner-color {
+        display: flex;
+        align-items: flex-end;
+        height: 120px;
+        background-color: #1C274C;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        position: relative;
+        .banner-image-area {
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          background-color: #D9D9D9;
+          position: absolute;
+          top: 12px;
+          left: 32px;
+        }
+      }
+      .banner-user-data {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        .profile-user-name {
+          font-size: 20px;
+          font-weight: bold;
+        }
+        .profile-user-contact {
+          display: flex;
+          gap: 14px;
+          .profile-contact{
+            display: flex;
+            gap: 8px;
+          }
+        }
+      }
+    }
+    .profile-tabs {
+      display: flex;
+      width: 100%;
+      border-radius: 8px;
+      background-color: #fff;
+      .profile-tab {
+        margin: 12px auto;
+        &.active {
+          .tab-button {
+            font-weight: bold;
+            color: #000;
+          }
+        }
+        .tab-button {
+          border: 0;
+          padding: 8px;
+          background-color: transparent;
+          font-size: 20px;
+          color: #a3a3a3;
+          font-family: 'Inter', sans-serif;
+          transition: all 0.3s;
+          cursor: pointer;
+        }
+      }
+    }
+    .profile-body {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      background-color: #fff;
+    }
+    .edit-profile-form {
+      display: flex;
+      justify-content: center;
+      .edit-profile-form-box {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        padding: 24px;
+        width: 50%;
+        .form-contact-area {
+          display: flex;
+          gap: 12px;
+        }
+        .form-address-area {
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+          .form-complement-cep-area {
+            display: flex;
+            gap: 12px;
+          }
+          .form-state-city-area {
+            display: flex;
+            gap: 12px;
+          }
+        }
+        .save-changes-button {
+          display: flex;
+          justify-content: flex-end;
+          .save-button {
+            border: 0;
+            width: 20%;
+            height: 50px;
+            background-color: #1C274C;
+            color: #fff;
+            font-size: 20px;
+            border-radius: 14px;
+            cursor: pointer;
+          }
+        }
+        .form-input {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          width: 100%;
+          .input-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
+            transition: all 0.3s;
+          }
+          input {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            font-size: 16px;
+            padding: 5px;
+            border-radius: 8px;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid $black;
+            width: 100%;
+            transition: all 0.3s;
+          }
+        }
+      }
+    }
+    .profile-orders {
+      display: none;
+      .profile-orders-box {
+        display: flex;
+        flex-direction: column;
+        padding: 12px;
+        gap: 14px;
+        width: 100%;
+        .order-list {
+          border-collapse: collapse;
+          border: 1px solid #ccc;   
+          border-radius: 8px;
+          overflow: hidden;       
+          background-color: #f2f2f2;
+          .order-list-header {
+            text-align: center;
+            background-color: #D9D9D9;
+            th{
+              padding: 12px;
+            }
+          }
+          .order-list-line {
+            text-align: center;
+            border-bottom: 1px solid #B0B0B0;
+            cursor: pointer;
+            td {
+              font-size: 16px;
+              font-weight: 600;
+              padding: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

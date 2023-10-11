@@ -1,0 +1,17 @@
+.accordion .accordion-body {
+  overflow: hidden;
+  height: 0px;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.accordion .open-box-button {
+  opacity: 1;
+}
+.accordion.active .open-box-button {
+  opacity: 0;
+}
+.accordion.active .accordion-body {
+  height: auto;
+  gap: 16px;
+}/*# sourceMappingURL=accordion.css.map */

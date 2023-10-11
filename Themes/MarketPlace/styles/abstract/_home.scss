@@ -44,7 +44,7 @@ body{
   }
 }
 
-/* Barre de navigation */
+/* navigation */
 
 .active-nav-bar {
     border-style: solid;
@@ -85,7 +85,7 @@ body{
   text-align: center;
   font: 600 20px "Inter", sans-serif;
 }
-/* Fin de la barre de navigation */
+
 
 /* Header */
 .banner-msg{
@@ -109,9 +109,7 @@ body{
   background: #BDBDBD;
   cursor:pointer;
 }
-/* Fin du header */
 
-/* Section principale */
 
 .main{
     display: flex;
@@ -124,7 +122,7 @@ body{
     margin: 0 auto;
     margin-top: 80px;
 }
-/* Toutes les cartes */
+
 .cards{
     display: grid;
     flex-wrap: wrap;
@@ -186,9 +184,7 @@ body{
     font-weight: 700;
     font-size: 24px;
 }
-/* Fin de toutes les cartes */
 
-/* Video de présentation */
 .main .video{
   margin-top: 80px;
   width: 100%;
@@ -199,10 +195,7 @@ body{
   width: 100%;
   height: 400px;
 }
-/* Fin de la vidéo de présentation */
-/* Fin de la section principale */
 
-/* Pied de page */
 .footer-area {
   background-color: #1c274c;
   padding: 30px;
@@ -211,13 +204,16 @@ body{
   flex-wrap:wrap;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
   .footer-content {
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     width: 100%;
     .social-media{
       display: flex;
       p{
+        box-sizing: border-box;
         margin-right: 15px;
         border: 1px solid #fff;
         border-radius: 100%;

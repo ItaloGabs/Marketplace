@@ -5,6 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 body {
   margin: 0px;
   padding: 0px;
@@ -51,7 +52,7 @@ body {
   color: #000000;
 }
 
-/* Barre de navigation */
+/* navigation */
 .active-nav-bar {
   border-style: solid;
   border-color: #fcc530;
@@ -93,7 +94,6 @@ body {
   font: 600 20px "Inter", sans-serif;
 }
 
-/* Fin de la barre de navigation */
 /* Header */
 .banner-msg {
   display: flex;
@@ -119,8 +119,6 @@ body {
   cursor: pointer;
 }
 
-/* Fin du header */
-/* Section principale */
 .main {
   display: flex;
   flex-direction: column;
@@ -133,7 +131,6 @@ body {
   margin-top: 80px;
 }
 
-/* Toutes les cartes */
 .cards {
   display: grid;
   flex-wrap: wrap;
@@ -197,8 +194,6 @@ body {
   font-size: 24px;
 }
 
-/* Fin de toutes les cartes */
-/* Video de présentation */
 .main .video {
   margin-top: 80px;
   width: 100%;
@@ -211,9 +206,6 @@ body {
   height: 400px;
 }
 
-/* Fin de la vidéo de présentation */
-/* Fin de la section principale */
-/* Pied de page */
 .footer-area {
   background-color: #1c274c;
   padding: 30px;
@@ -222,8 +214,10 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
 }
 .footer-area .footer-content {
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -232,6 +226,7 @@ body {
   display: flex;
 }
 .footer-area .footer-content .social-media p {
+  box-sizing: border-box;
   margin-right: 15px;
   border: 1px solid #fff;
   border-radius: 100%;
@@ -1187,11 +1182,6 @@ input:focus {
     display: none;
   }
 }
-/*
-I wanted to go with a mobile first approach, but it actually lead to more verbose CSS in this case, so I've gone web first. Can't always force things...
-
-Side note: I know that this style of nesting in SASS doesn't result in the most performance efficient CSS code... but on the OCD/organizational side, I like it. So for CodePen purposes, CSS selector performance be damned.
-*/
 /* Global settings */
 * {
   margin: 0;
@@ -1199,14 +1189,14 @@ Side note: I know that this style of nesting in SASS doesn't result in the most 
   box-sizing: border-box;
 }
 
+body {
+  height: 100vh;
+}
+
 .default-centralize {
   padding: 0 20px;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-body {
-  height: 100vh;
 }
 
 /* Body/Header stuff */
@@ -1237,7 +1227,7 @@ body {
 .product-area .product-list {
   background: #fff;
   margin-top: 20px;
-  border-radius: 7px;
+  border-radius: 8px;
 }
 .product-area .product-list .product {
   width: 100%;
@@ -1388,7 +1378,7 @@ body {
   background: #fff;
   width: 100%;
   height: 288px;
-  border-radius: 7px;
+  border-radius: 8px;
 }
 .checkout-area .totals .totals-summary {
   padding: 10px;
@@ -1580,11 +1570,11 @@ body {
   display: flex;
   width: 100%;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   gap: 24px;
 }
 .checkout-content .payment-area .user-data-area {
-  min-width: 800px;
+  max-width: 740px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -1599,10 +1589,17 @@ body {
 .checkout-content .payment-area .user-data-area .address-area {
   width: 100%;
   background-color: white;
-  border-radius: 7px;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+}
+.checkout-content .payment-area .user-data-area .address-area.active .title-box {
+  margin-bottom: 12px;
+}
+.checkout-content .payment-area .user-data-area .address-area .title-box {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
 }
 .checkout-content .payment-area .user-data-area .address-area .info-box {
   display: flex;
@@ -1617,28 +1614,28 @@ body {
 }
 .checkout-content .payment-area .user-data-area .add-address-area {
   background-color: white;
-  border-radius: 7px;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
+}
+.checkout-content .payment-area .user-data-area .add-address-area.active .add-address-selection {
+  margin-bottom: 12px;
 }
 .checkout-content .payment-area .user-data-area .add-address-area .add-address-selection {
   display: flex;
   justify-content: space-between;
-}
-.checkout-content .payment-area .user-data-area .add-address-area .add-address-selection .open-box-button {
   cursor: pointer;
 }
-.checkout-content .payment-area .user-data-area .add-address-area .add-address-form {
-  display: flex;
+.checkout-content .payment-area .user-data-area .add-address-area .accordion-body {
   flex-direction: column;
 }
-.checkout-content .payment-area .user-data-area .add-address-area .add-address-form .address {
+.checkout-content .payment-area .user-data-area .add-address-area .accordion-body .complement {
   display: flex;
-  justify-content: space-between;
+  gap: 32px;
 }
-.checkout-content .payment-area .user-data-area .add-address-area .add-address-form .state {
+.checkout-content .payment-area .user-data-area .add-address-area .accordion-body .state {
   display: flex;
-  justify-content: space-between;
+  gap: 32px;
 }
 .checkout-content .payment-area .user-data-area .add-address-area .form-input {
   display: flex;
@@ -1647,7 +1644,6 @@ body {
 .checkout-content .payment-area .user-data-area .add-address-area .form-input .input-label {
   font-family: "Inter", sans-serif;
   font-size: 20px;
-  margin-top: 12px;
   transition: all 0.3s;
 }
 .checkout-content .payment-area .user-data-area .add-address-area .form-input input {
@@ -1655,7 +1651,7 @@ body {
   color: #333;
   font-size: 16px;
   padding: 5px;
-  border-radius: 7px;
+  border-radius: 8px;
   background-color: rgb(255, 255, 255);
   border: 1px solid hsl(0, 0%, 0%);
   width: 100%;
@@ -1663,7 +1659,7 @@ body {
 }
 .checkout-content .payment-area .user-data-area .payment-type-area {
   background-color: hsl(0, 0%, 100%);
-  border-radius: 7px;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -1687,7 +1683,7 @@ body {
   outline: 0;
   box-shadow: none;
   border: 1px solid hsl(0, 0%, 0%);
-  border-radius: 7px;
+  border-radius: 8px;
   background: hsl(0, 0%, 100%);
   background-image: none;
   flex: 1;
@@ -1713,9 +1709,9 @@ body {
   display: none;
 }
 .checkout-content .payment-area .checkout-box {
-  min-width: 500px;
+  max-width: 430px;
   background-color: white;
-  border-radius: 7px;
+  border-radius: 8px;
 }
 .checkout-content .payment-area .checkout-box .checkout-list .checkout-product {
   display: flex;
@@ -1767,4 +1763,221 @@ body {
   font-size: 25px;
   border-radius: 14px;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 650px) {
+  .checkout-content {
+    background-color: #E7E7E7;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .checkout-content .payment-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .default-centralize {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+.accordion .accordion-body {
+  overflow: hidden;
+  height: 0px;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.accordion .open-box-button {
+  opacity: 1;
+}
+.accordion.active .open-box-button {
+  opacity: 0;
+}
+.accordion.active .accordion-body {
+  height: auto;
+  gap: 16px;
+}
+
+.profile-content {
+  background-color: #E7E7E7;
+  min-height: calc(100% - 173px);
+}
+.profile-content .profile-area {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.profile-content .profile-area .profile-banner {
+  width: 100%;
+  height: auto;
+  margin-top: 24px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.profile-content .profile-area .profile-banner .banner-color {
+  display: flex;
+  align-items: flex-end;
+  height: 120px;
+  background-color: #1C274C;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  position: relative;
+}
+.profile-content .profile-area .profile-banner .banner-color .banner-image-area {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #D9D9D9;
+  position: absolute;
+  top: 12px;
+  left: 32px;
+}
+.profile-content .profile-area .profile-banner .banner-user-data {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.profile-content .profile-area .profile-banner .banner-user-data .profile-user-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+.profile-content .profile-area .profile-banner .banner-user-data .profile-user-contact {
+  display: flex;
+  gap: 14px;
+}
+.profile-content .profile-area .profile-banner .banner-user-data .profile-user-contact .profile-contact {
+  display: flex;
+  gap: 8px;
+}
+.profile-content .profile-area .profile-tabs {
+  display: flex;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.profile-content .profile-area .profile-tabs .profile-tab {
+  margin: 12px auto;
+}
+.profile-content .profile-area .profile-tabs .profile-tab.active .tab-button {
+  font-weight: bold;
+  color: #000;
+}
+.profile-content .profile-area .profile-tabs .profile-tab .tab-button {
+  border: 0;
+  padding: 8px;
+  background-color: transparent;
+  font-size: 20px;
+  color: #a3a3a3;
+  font-family: "Inter", sans-serif;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.profile-content .profile-area .profile-body {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.profile-content .profile-area .edit-profile-form {
+  display: flex;
+  justify-content: center;
+}
+.profile-content .profile-area .edit-profile-form .edit-profile-form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px;
+  width: 50%;
+}
+.profile-content .profile-area .edit-profile-form .edit-profile-form-box .form-contact-area {
+  display: flex;
+  gap: 12px;
+}
+.profile-content .profile-area .edit-profile-form .edit-profile-form-box .form-address-area {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.profile-content .profile-area .edit-profile-form .edit-profile-form-box .form-address-area .form-complement-cep-area {
+  display: flex;
+  gap: 12px;
+}
+.profile-content .profile-area .edit-profile-form .edit-profile-form-box .form-address-area .form-state-city-area {
+  display: flex;
+  gap: 12px;
+}
+.profile-content .profile-area .edit-profile-form .edit-profile-form-box .save-changes-button {
+  display: flex;
+  justify-content: flex-end;
+}
+.profile-content .profile-area .edit-profile-form .edit-profile-form-box .save-changes-button .save-button {
+  border: 0;
+  width: 20%;
+  height: 50px;
+  background-color: #1C274C;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 14px;
+  cursor: pointer;
+}
+.profile-content .profile-area .edit-profile-form .edit-profile-form-box .form-input {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+.profile-content .profile-area .edit-profile-form .edit-profile-form-box .form-input .input-label {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  transition: all 0.3s;
+}
+.profile-content .profile-area .edit-profile-form .edit-profile-form-box .form-input input {
+  font-family: "Inter", sans-serif;
+  color: #333;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid hsl(0, 0%, 0%);
+  width: 100%;
+  transition: all 0.3s;
+}
+.profile-content .profile-area .profile-orders {
+  display: none;
+}
+.profile-content .profile-area .profile-orders .profile-orders-box {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 14px;
+  width: 100%;
+}
+.profile-content .profile-area .profile-orders .profile-orders-box .order-list {
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.profile-content .profile-area .profile-orders .profile-orders-box .order-list .order-list-header {
+  text-align: center;
+  background-color: #D9D9D9;
+}
+.profile-content .profile-area .profile-orders .profile-orders-box .order-list .order-list-header th {
+  padding: 12px;
+}
+.profile-content .profile-area .profile-orders .profile-orders-box .order-list .order-list-line {
+  text-align: center;
+  border-bottom: 1px solid #B0B0B0;
+  cursor: pointer;
+}
+.profile-content .profile-area .profile-orders .profile-orders-box .order-list .order-list-line td {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px;
 }/*# sourceMappingURL=style.css.map */
